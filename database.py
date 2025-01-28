@@ -8,7 +8,7 @@ engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def get_session() -> Session:
-    db = SessionLocal()  # DB 세션을 생성하는 코드
+    db = SessionLocal()
     try:
         yield db
     finally:

@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 from pydantic import BaseModel
 from pydantic.v1 import validator
-from sqlmodel import Field, Session, SQLModel, create_engine, select, Column, BigInteger
+from sqlmodel import Field, SQLModel, Column, BigInteger
 
 
 class Customer(SQLModel, table=True):
