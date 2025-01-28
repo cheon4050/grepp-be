@@ -1,6 +1,10 @@
 ## GREPP 과제
 언어 및 프레임워크: python & FastAPI
 ## 실행 방법
+### git clone
+```commandline
+git clone https://github.com/cheon4050/grepp-be.git
+```
 ### DB 실행환경
 postgresql 도커 컨테이너 실행 커맨드
 ```commandline
