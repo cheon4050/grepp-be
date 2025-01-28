@@ -101,7 +101,7 @@ def get_reservations(
 
 
 @app.get("/admin/reservations")
-def get_reservations(
+def get_reservations_admin(
         session: Session = Depends(get_session),
 ):
     reservations = session.query(
@@ -221,7 +221,7 @@ def confirm_reservation(
     reservation.confirmed = True
     session.commit()
 
-    return {"예약이 확정되었습니다."}
+    return "예약이 확정되었습니다."
 
 
 @app.delete("/reservations")
@@ -251,7 +251,7 @@ def delete_reservation(
 
 
 @app.delete("/admin/reservations")
-def delete_reservation(
+def delete_reservation_admin(
         reservation_id: int = Query(...),
         session: Session = Depends(get_session),
 ):
